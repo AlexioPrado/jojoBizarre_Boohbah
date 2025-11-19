@@ -4,10 +4,10 @@ SELECT * FROM JOJO_STAND;
 SELECT * FROM BOOHBAH;
 
 --Q1
-SELECT boohbah_id, AVG(sync_level) name
+SELECT boohbah_id, AVG(sync_level), name
 FROM boohbah_stand_link
 JOIN boohbah USING (boohbah_id)
-GROUP BY boohbah_id;
+GROUP BY boohbah_id, name;
 
 --Q2
 SELECT b.name, s.stand_name
